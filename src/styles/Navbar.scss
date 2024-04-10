@@ -1,0 +1,124 @@
+$primary-color: white;
+
+@mixin displayflexrow{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+
+@mixin displayflexcolumn{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+@mixin justifycenterrow{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+
+@mixin justifycentercolumn{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+@mixin justifyspacebetweenrow{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+
+@mixin justifyspaceevenlyrow{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+@mixin justifyspacearoundrow{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+}
+
+@mixin justifyspacebetweencolumn{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+}
+
+@mixin justifyspaceevenlycolumn{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+@mixin justifyspacearoundcolumn{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+}
+
+
+.navbar-main{
+    @include justifycenterrow();
+    height: 80px;
+    width: 100%;
+    background-color: $primary-color;
+    box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+.navbar-inner{
+    height: 100%;
+    width: 90%;
+    @include justifyspaceevenlyrow();
+}
+
+.k-image{
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    height: 55px;
+    width: 55px;
+    border-radius: 10px;
+}
+
+.kimage{
+    height: 55px;
+    width: 55px;
+}
+
+.kongutxt{
+    @include justifycentercolumn();
+    height: 90%;
+    width: 700px; 
+}
+
+h2{
+    font-size: 30px;
+}
+
+h4{
+    font-weight: 600;
+}
+
+.clg-logo{
+    height: 50px;
+    width: 60px;
+}
+
+.clg-logo{
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    height: 55px;
+    width: 55px;
+    border-radius: 10px;
+}

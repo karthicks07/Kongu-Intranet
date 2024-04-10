@@ -1,0 +1,39 @@
+.regulation-main {
+    height: 87.9vh;
+    width: 100%;
+    background-color: rgb(224, 224, 224);
+  }
+  
+  .regulation-inner {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    padding: 20px;
+  }
+  
+  .regulation-item {
+    width: 250px;
+    margin-bottom: 20px;
+    padding: 20px;
+    background-color: #ffffff;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    text-align: center;
+  }
+  
+  .regulation-item img {
+    width: 90%;
+    height: 150px;
+    object-fit: cover;
+    margin-bottom: 20px;
+  }
+  
+  .regulation-item h2 {
+    font-size: 20px;
+    margin-bottom: 10px;
+  }
+  
+  .regulation-item p {
+    font-size: 16px;
+  }
+  
