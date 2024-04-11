@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import '../styles/Reg.scss';
 import pad from '../images/padtick.png';
 
-function Reg2014() {
+function Reg2020() {
   const initialItems = [
     {
       title: 'Data Structure',
@@ -69,8 +69,10 @@ function Reg2014() {
   const [items, setItems] = useState(initialItems);
   const [searchQuery, setSearchQuery] = useState('');
 
+  // Function to handle search input change
   const handleSearchChange = (event) => {
     setSearchQuery(event.target.value);
+    // Filter items based on the search query
     const filteredItems = initialItems.filter((item) =>
       item.title.toLowerCase().includes(event.target.value.toLowerCase()) || item.qpcode.toLowerCase().includes(event.target.value.toLowerCase()) 
     );
@@ -80,7 +82,7 @@ function Reg2014() {
   return (
     <div>
       <div className="reghead">
-        <h3 style={{ fontSize: '23px', margin: '0px' }}>Regulation - 2014</h3>
+        <h3 style={{ fontSize: '23px', margin: '0px' }}>Regulation - 2020</h3>
         <input
           type="search"
           className="searchbar"
@@ -111,4 +113,4 @@ function Reg2014() {
   );
 }
 
-export default Reg2014;
+export default Reg2020;
