@@ -7,11 +7,11 @@ function Navbar() {
     <div className="navbar-main">
         <div className="navbar-inner">
             <div className="k-image">
-                <img src={Kimage} alt="k-image" className='kimage'/>
+                <img src={Kimage} alt="kimage" className='kimage'/>
             </div>
             <div className="kongutxt">
                 <h2 style={{margin:0}}>KONGU ENGINEERING COLLEGE</h2>
-                <h4 style={{margin:0}}>Contoller of Examonations</h4>
+                <h4 style={{ margin: 0, color: 'green' }}>Controller of Examinations</h4>
             </div>
             <div className="clg-logo">
                 <img src={clglogo} alt="clgimage" className='kimage' />
