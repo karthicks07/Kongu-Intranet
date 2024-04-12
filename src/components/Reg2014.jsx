@@ -84,7 +84,7 @@ function Reg2014() {
         <input
           type="search"
           className="searchbar"
-          placeholder="Search by title..."
+          placeholder="Search by title or course code..."
           value={searchQuery}
           onChange={handleSearchChange}
         />
