@@ -2,67 +2,116 @@ import React, { useState } from 'react';
 import '../styles/Reg.scss';
 import pad from '../images/padtick.png';
 
+
 function Reg2014() {
   const initialItems = [
     {
       title: 'Data Structure',
-      year: 'April/May 2016',
-      qpcode: '20CST21'
+      year: 'November/December 2015',
+      qpcode: '14CST31',
+      qp:'14CST31_DataStrctures.pdf'
     },
     {
-      title: 'Computer Networks',
-      year: 'April/May 2017',
-      qpcode: '20CST22'
+      title: 'OOPS Using C++',
+      year: 'November/December 2015',
+      qpcode: '14CST32',
+      qp: '14CST32_OOPS_using_C++.pdf'
     },
     {
-      title: 'Database Systems',
-      year: 'April/May 2018',
-      qpcode: '20CST23'
+      title: 'Computer Organization',
+      year: 'November/December 2015',
+      qpcode: '14CST33',
+      qp: '14CST33_Computer_Organization.pdf'
     },
     {
-      title: 'Database Systems',
-      year: 'April/May 2018',
-      qpcode: '20CST23'
+      title: 'Digital Logics',
+      year: 'November/December 2015',
+      qpcode: '14CST34',
+      qp:'14CST34_Digital_Logic.pdf'
     },
     {
-      title: 'Database Systems',
-      year: 'April/May 2018',
-      qpcode: '20CST23'
+      title: 'OOPS in C++',
+      year:'November/December 2015',
+      qpcode: '14CST35',
+      qp:'14CST35_OOPS.pdf'
     },
     {
-      title: 'Database Systems',
-      year: 'April/May 2018',
-      qpcode: '20CST23'
+      title: 'Database Management',
+      year: 'May/June 2016',
+      qpcode: '14CST41',
+      qp:'14CST41_Database_Management.pdf'
     },
     {
-      title: 'Database Systems',
-      year: 'April/May 2018',
-      qpcode: '20CST23'
+      title: 'Operating Systems',
+      year: 'May/June 2016',
+      qpcode: '14CST42',
+      qp:'14CST42_Operating_Systems.pdf'
     },
     {
-      title: 'Database Systems',
-      year: 'April/May 2018',
-      qpcode: '20CST23'
+      title: 'Software Engineering',
+      year: 'May/June 2016',
+      qpcode: '14CST44',
+      qp:'14CST44_Software_Engineering.pdf'
     },
     {
-      title: 'Database Systems',
-      year: 'April/May 2018',
-      qpcode: '20CST23'
+      title: 'Data Structures',
+      year: 'November/December 2016',
+      qpcode: '14CST31',
+      qp:'14CST31_Data_Strucures-2.pdf'
     },
     {
-      title: 'Database Systems',
-      year: 'April/May 2018',
-      qpcode: '20CST23'
+      title: 'OOPS Using C++',
+      year: 'November/December 2016',
+      qpcode: '14CST32',
+      qp: '14CST32_OOPS_using_C++-2.pdf'
     },
     {
-      title: 'Database Systems',
-      year: 'April/May 2018',
-      qpcode: '20CST23'
+      title: 'Computer Organization',
+      year: 'November/December 2016',
+      qpcode: '14CST33',
+      qp: '14CST33_Computer_Organization-2.pdf'
     },
     {
-      title: 'Database Systems',
-      year: 'April/May 2018',
-      qpcode: '20CST23'
+      title: 'Digital Logics',
+      year: 'November/December 2016',
+      qpcode: '14CST34',
+      qp:'14CST34_Digital_Logic-2.pdf'
+    },
+    {
+      title: 'OOPS in C++',
+      year:'November/December 2016',
+      qpcode: '14CST35',
+      qp:'14CST35_OOPS-2.pdf'
+    },
+    {
+      title: 'Advanced Databases',
+      year: 'November/December 2016',
+      qpcode: '14CSE01',
+      qp:'14CSE02_Advanced_Databases.pdf'
+    },
+    {
+      title: 'Artificial Intelligence',
+      year: 'November/December 2016',
+      qpcode: '14CSE02',
+      qp: '14CSE02_AI.pdf'
+    },
+    {
+      title: 'Advanced Java',
+      year: 'November/December 2016',
+      qpcode: '14CSE03',
+      qp: '14CSE03_Advanced_Java.pdf'
+    },
+    {
+      title: 'Computation Theory',
+      year: 'November/December 2016',
+      qpcode: '14CST53',
+      qp:'14CST52_CT.pdf'
+    },
+    {
+      title: 'System Design',
+      year:'November/December 2016',
+      qpcode: '14CST51',
+      qp:'14CST51_SD.pdf'
     },
   ];
 
@@ -72,10 +121,13 @@ function Reg2014() {
   const handleSearchChange = (event) => {
     setSearchQuery(event.target.value);
     const filteredItems = initialItems.filter((item) =>
-      item.title.toLowerCase().includes(event.target.value.toLowerCase()) || item.qpcode.toLowerCase().includes(event.target.value.toLowerCase()) 
+      item.title.toLowerCase().includes(event.target.value.toLowerCase()) 
+      || item.qpcode.toLowerCase().includes(event.target.value.toLowerCase()) 
+      || item.year.toLowerCase().includes(event.target.value.toLowerCase()) 
     );
     setItems(filteredItems);
   };
+
 
   return (
     <div>
@@ -91,7 +143,7 @@ function Reg2014() {
       </div>
       <div className="qp-container">
         {items.map((item, index) => (
-          <div key={index} className="qp-details">
+          <a href={item.qp}  target="_blank"><div key={index} className="qp-details">
             <div className="qpimage">
               <img src={pad} alt="pad" className="padimage" />
             </div>
@@ -104,7 +156,7 @@ function Reg2014() {
                 Course Code: {item.qpcode}
               </h5>
             </div>
-          </div>
+          </div></a>
         ))}
       </div>
     </div>
