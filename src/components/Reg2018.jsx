@@ -6,63 +6,63 @@ function Reg2018() {
   const initialItems = [
     {
       title: 'Data Structure',
-      year: 'April/May 2016',
-      qpcode: '20CST21'
+      year: 'December 2019',
+      qpcode: '18CST31',
+      qp:'18CST31_DS.pdf'
     },
     {
-      title: 'Computer Networks',
-      year: 'April/May 2017',
-      qpcode: '20CST22'
+      title: 'Computer Organisation',
+      year: 'December 2019',
+      qpcode: '18CST032',
+      qp:'18CST32_CO.pdf'
     },
     {
-      title: 'Database Systems',
-      year: 'April/May 2018',
-      qpcode: '20CST23'
+      title: 'OOPS using C',
+      year: 'December 2019',
+      qpcode: '18CST33',
+      qp:'18CST33_OOPS.pdf'
     },
     {
-      title: 'Database Systems',
-      year: 'April/May 2018',
-      qpcode: '20CST23'
+      title: 'Compiler Design',
+      year: 'May 2022',
+      qpcode: '18CST31',
+      qp:'18CST61_Compiler Design.pdf'
     },
     {
-      title: 'Database Systems',
-      year: 'April/May 2018',
-      qpcode: '20CST23'
+      title: 'Machine Learning',
+      year: 'May 2022',
+      qpcode: '18CST32',
+      qp:'18CST62_ML.pdf'
     },
     {
-      title: 'Database Systems',
-      year: 'April/May 2018',
-      qpcode: '20CST23'
+      title: 'Human Computer Interface',
+      year: 'December 2022',
+      qpcode: '18CSE12',
+      qp:'18CSE12_HCI.pdf'
     },
     {
-      title: 'Database Systems',
-      year: 'April/May 2018',
-      qpcode: '20CST23'
+      title: 'Software Project',
+      year: 'December 2022',
+      qpcode: '18CSE22',
+      qp:'18CSE22_Software Project.pdf'
     },
     {
-      title: 'Database Systems',
-      year: 'April/May 2018',
-      qpcode: '20CST23'
+      title: 'Software Quality',
+      year: 'December 2022',
+      qpcode: '18CSE11',
+      qp:'18CSE17_Software Quality.pdf'
     },
     {
-      title: 'Database Systems',
-      year: 'April/May 2018',
-      qpcode: '20CST23'
+      title: 'Data Warehousing',
+      year: 'May 2022',
+      qpcode: '18CSE05',
+      qp:'18CSE05_Data Warehousing.pdf'
     },
     {
-      title: 'Database Systems',
-      year: 'April/May 2018',
-      qpcode: '20CST23'
-    },
-    {
-      title: 'Database Systems',
-      year: 'April/May 2018',
-      qpcode: '20CST23'
-    },
-    {
-      title: 'Database Systems',
-      year: 'April/May 2018',
-      qpcode: '20CST23'
+      title: 'Building Enterprise',
+      year: 'May 2022',
+      qpcode: '18CSE06',
+      qp:'18CSE06_Building Enterprise.pdf'
     },
   ];
 
@@ -93,20 +93,20 @@ function Reg2018() {
       </div>
       <div className="qp-container">
         {items.map((item, index) => (
-          <div key={index} className="qp-details">
-            <div className="qpimage">
-              <img src={pad} alt="pad" className="padimage" />
-            </div>
-            <div className="details">
-              <h3 style={{ margin: '8px' }}>{item.title}</h3>
-              <h5 style={{ fontSize: '12px', fontWeight: '600', color: 'gray', margin: '5px' }}>
-                {item.year}
-              </h5>
-              <h5 style={{ fontSize: '12px', fontWeight: '600', color: 'gray', margin: '5px' }}>
-                Course Code: {item.qpcode}
-              </h5>
-            </div>
+          <a href={item.qp}  target="_blank" rel="noreferrer"><div key={index} className="qp-details">
+          <div className="qpimage">
+            <img src={pad} alt="pad" className="padimage" />
           </div>
+          <div className="details">
+            <h3 style={{ margin: '8px', fontSize:'16px' }}>{item.title}</h3>
+            <h5 style={{ fontSize: '12px', fontWeight: '600', color: 'gray', margin: '5px' }}>
+              {item.year}
+            </h5>
+            <h5 style={{ fontSize: '12px', fontWeight: '600', color: 'gray', margin: '5px' }}>
+              Course Code: {item.qpcode}
+            </h5>
+          </div>
+        </div></a>
         ))}
       </div>
     </div>

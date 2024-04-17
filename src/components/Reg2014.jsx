@@ -143,7 +143,7 @@ function Reg2014() {
       </div>
       <div className="qp-container">
         {items.map((item, index) => (
-          <a href={item.qp}  target="_blank"><div key={index} className="qp-details">
+          <a href={item.qp}  target="_blank" rel="noreferrer"><div key={index} className="qp-details">
             <div className="qpimage">
               <img src={pad} alt="pad" className="padimage" />
             </div>
